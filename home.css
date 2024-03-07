@@ -1,0 +1,127 @@
+/*---------------navbar-style --------------------*/
+.navbar ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    align-items: end;
+    font-weight: bolder;
+   
+  }
+  .navbar li {
+    display: inline;
+    margin-right: 20px; 
+    display: block;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: rgb(212, 191, 151);
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+  
+   }
+   /* ------------------------------------------ */
+  body{
+    background-color: #61331F;
+  }
+ 
+.Form{
+  margin-bottom: 130px;
+  padding: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: end;
+ 
+}
+.opt , Form{
+margin-top: 10px; /* Adjust the top margin as needed */
+width: 250px; 
+}
+
+
+
+  .opt,.Form{
+    background-color: #61331F;
+    color: rgb(212, 191, 151);
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+   
+  
+  
+      margin-right: 450px;
+      margin-bottom: 30px;
+      color: rgb(212, 191, 151);
+      font-size: large;
+      background-color: #61331F;
+     
+  
+  }
+
+.card-container {
+  display: flex;
+  justify-content:  space-between;
+  margin: 20px; /* Add margin as needed */
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  display: inline-block; /* Display cards in the same line */
+}
+
+.card-details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(212, 191, 151);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.text-body {
+  color: rgb(134, 134, 134);
+}
+
+.text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card:hover {
+  border-color: #61331F;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+img{
+  width: 50px;
+  height: 50px;
+}

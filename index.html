@@ -1,26 +1,118 @@
+<!-- ------------------------------------------HTML----------------------------------------------------- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <!-- navbrar -->
-    <div id="headerDiv">    
-        <nav class="navbar">
-            <header>
-                <ul>
-                    <li><a href="#About-us">About us</span></a></li>
-                    <li><a href="#Career">Career</a></li>
-                    <li><a href="#Departments">Departments</a></li>
-                </ul>
-          
-                <div class="container">
-                    <input required="" type="text" name="text" class="input">
-                    <label class="label">Search for an item</label>
-                  </div>
-                
+        <!-- navbar -->
+<div id="headerDiv">    
+    <nav class="navbar">
+<ul>
+    <li><a href="./home.html">Home</a></li>
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./Sign-up.html">Sign-up</a></li>
+</ul>
+<!-- search-bar -->
+
+<!-- intro to the website h1+P -->
+<div class="animated-text">
+    <span class="letter">W</span>
+    <span class="letter">e</span>
+    <span class="letter">l</span>
+    <span class="letter">c</span>
+    <span class="letter">o</span>
+    <span class="letter">m</span>
+    <span class="letter">e</span>
+    <span class="letter">!</span>
+   
+</div>
+    <p class="animated-paragraph">Welcome to our online sanctuary for book enthusiasts! Dive into the captivating world of literature <br>with our carefully curated collection of books spanning various genres and themes. <br> Whether you're an avid reader seeking the latest bestsellers, a literature connoisseur exploring <br>timeless classics, or a curious soul discovering hidden gems, our book website is your literary <br> haven. Browse through our virtual shelves, explore intriguing plotlines, and embark on literary adventures <br> that transport you to different worlds. Join our community of fellow book lovers, where we celebrate the written word <br> and share our passion for stories that inspire, entertain, and provoke thought. Uncover the joy of reading <br> as you embark on a journey through the pages of imagination on our book website <br> where every book is a portal to new horizons."</p>
+            <p><h1 style="color: 333; margin-left: 750px;">Don't have an account ? <span style="text-decoration: underline;"><a href="./Sign-up.html">Sign Up !</a> </span></h1></p>
+            <!------- ---------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------STYLE CSS------------------------------------------------------------ -->
+        <style>
+/*---------------navbar-style --------------------*/
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  align-items: end;
+  font-weight: bolder;
+}
+.navbar li {
+  display: inline;
+  margin-right: 20px; 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: wheat;
+  transition: 0.3s;
+ }
+ .navbar a :hover{
+  text-decoration: underline;
+
+ }
+ /* ------------------------------------------ */
+
+ /*--------------- H1+P STYLE--------------------- */
+ .h1{
+  margin-top: 50px;
+ 
+ }
+ .animated-paragraph{
+ margin-top: 50px;
+  
+ }
+ 
+/* ------------------------------------------------------------------ */
+body{
+  background-image: url(./How\ Many\ Books\ Have\ Ever\ Been\ Published_.jpeg) ;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: wheat;
+  font-size: 23px;
+  
+  
+}
+/* --------TEXT ANIMATION */
+.animated-text  {
+  font-size: 2em;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-text .letter  {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(3em);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+.animated-paragraph {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(3em);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* ---------------------------------------------- */
+        </style> 
+
 </body>
 </html>
