@@ -231,14 +231,7 @@ img{
 
     }
     
-    .Image {
-        max-width: 100%; /* Ensure the image doesn't exceed its container */
-    /* margin-bottom: 250px; */
-    margin-left: 425px;
-    /* display: inline; */
-    margin-top: 20px;
-    margin-bottom: 90px;
-    }
+   
     .h1{
       margin-top: 100px;
       /* display: inline; */
@@ -254,6 +247,8 @@ img{
       border: 2px solid #c3c6ce;
       transition: 0.5s ease-out;
       overflow: visible;
+      display: flex;
+      justify-content: space-around;
      }
      
      .carte-details {
@@ -262,6 +257,10 @@ img{
       gap: .5em;
       display: grid;
       place-content: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
      }
      
      .carte-button-2 {
