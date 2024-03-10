@@ -1,4 +1,25 @@
-<div class="form-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+        <!-- navbar -->
+<div id="headerDiv">    
+    <nav class="navbar">
+<ul>
+    <li><a href="./home.html">Home</a></li>
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./Sign-up.html">Sign-up</a></li>
+  
+    
+</ul>
+
+      
+  <div class="form-container">
     <p class="title">Welcome back !</p>
     <form class="form">
       <input type="email" class="input" placeholder="Email">
@@ -54,6 +75,7 @@
   margin: 10px 0 30px 0;
   font-size: 28px;
   font-weight: 800;
+  color: #000;
 }
 
 .form {
@@ -195,10 +217,32 @@ body{
   box-sizing: border-box;
   padding: 20px 30px;
   margin-left: 450px;
-  margin-top: 95px;
+  margin-top: 55px;
   opacity: 0; /* Initially set to be invisible */
   transform: translateY(-20px); /* Initially moved up by 20px */
   animation: fadeIn 0.5s ease-out forwards; /* Animation properties */
 }
+/*---------------navbar-style --------------------*/
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  align-items: end;
+  font-weight: bolder;
+}
+.navbar li {
+  display: inline;
+  margin-right: 20px; 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: wheat;
+  transition: 0.3s;
+ }
+ .navbar a :hover{
+  text-decoration: underline;
+  }
+
 
  </style>

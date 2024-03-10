@@ -6,7 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+          <!-- navbar -->
+  <div id="headerDiv">    
+      <nav class="navbar">
+  <ul>
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./Sign-up.html">Sign-up</a></li>
     
+      
+  </ul>
+
     <div class="form-box">
         <form class="form">
             <span class="title">Sign up</span>
@@ -31,6 +41,7 @@
   color: #010101;
   margin-left: 450px;
   margin-top: 100px;
+  /* margin-top: 95px; */
 }
 
 .form {
@@ -61,6 +72,7 @@
   background-color: wheat;
   margin: 1rem 0 .5rem;
   width: 100%;
+  
   
 }
 
@@ -134,6 +146,7 @@ body{
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 0.5s ease-out forwards;
+ 
 }
 
 .form {
@@ -143,6 +156,7 @@ body{
   padding: 32px 24px 24px;
   gap: 16px;
   text-align: center;
+  
 }
 
 /* Other styles remain the same */
@@ -150,6 +164,28 @@ body{
 body {
   background-color: #815948;
 }
+/*---------------navbar-style --------------------*/
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  align-items: end;
+  font-weight: bolder;
+}
+.navbar li {
+  display: inline;
+  margin-right: 20px; 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: wheat;
+  transition: 0.3s;
+ font-size: 23px;
+ }
+ .navbar a :hover{
+  text-decoration: underline;
+  }
 
 
 
