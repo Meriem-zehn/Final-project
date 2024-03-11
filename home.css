@@ -21,7 +21,7 @@
     font-size: 25px;
     font-weight: bold;
     display: block;
-    transition: underline 0.3s;
+    transition: underline 3s;
   
    }
    .navbar a:hover {
@@ -237,67 +237,165 @@ img{
       /* display: inline; */
     }
     
-    .carte {
-      width: 190px;
-      height: 254px;
-      border-radius: 20px;
-      background: #f5f5f5;
-      position: relative;
-      padding: 1.8rem;
-      border: 2px solid #c3c6ce;
-      transition: 0.5s ease-out;
-      overflow: visible;
-      display: flex;
-      justify-content: space-around;
-     }
-     
-     .carte-details {
-      color: black;
-      height: 100%;
-      gap: .5em;
-      display: grid;
-      place-content: center;
+     /* Container for carte elements */
+.carte-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  grid-gap: 4.5rem; 
+  padding: 1.5rem;
+justify-content: space-around;
+  margin-left: 40px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-     }
-     
-     .carte-button-2 {
-      transform: translate(-50%, 125%);
-      width: 60%;
-      border-radius: 1rem;
-      border: none;
-      background-color: #008bf8;
-      color: #fff;
-      font-size: 1rem;
-      padding: .5rem 1rem;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      opacity: 0;
-      transition: 0.3s ease-out;
-     }
-     
-     .text--body {
-      color: rgb(134, 134, 134);
-     }
-     
-     /*Text*/
-     .text-titre {
-      font-size: 1.5em;
-      font-weight: bold;
-     }
-     
-     /*Hover*/
-     .carte:hover {
-      border-color: #008bf8;
-      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-     }
-     
-     .carte:hover .carte-button-2 {
-      transform: translate(-50%, 50%);
-      opacity: 1;
-     }
 
-    
+
+ 
+}
+
+.carte {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  display: flex;
+  flex-direction: column; /* Updated to column to stack elements vertically */
+  align-items: center; /* Center the content horizontally */
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center calc(50% + 50px);
+
+}
+
+.carte-details {
+  color: black;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carte-button-2 {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(212, 191, 151);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+cursor: pointer;
+}
+
+.text--body {
+  color: rgb(134, 134, 134);
+}
+
+/*Text*/
+.text-titre {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*Hover*/
+.carte:hover {
+  border-color: rgb(250, 218, 158);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.carte:hover .carte-button-2 {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+
+.CartBtn {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(255, 208, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  margin-bottom: 60px;
+  
+}
+
+.IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  z-index: 1;
+  transition-duration: .5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+  transform: translateX(50px);
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+  transform: translate(10px,0px);
+  transition-duration: .5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+
+.pctr {
+  display: flex;
+  justify-content: center;
+    width: 260px; /* Make the image take up the full width of the card */
+    height: 320px; /* Make the image take up the full height of the card */
+    object-fit: cover; /* Maintain the aspect ratio of the image while filling the card */
+    border-radius: 20px; /* Add a border-radius to the image */
+  }
+
+  .card.visible {
+    transform: translateY(0);
+  }
