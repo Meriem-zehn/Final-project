@@ -1,32 +1,33 @@
-// const [cartItems, setCartItems] = useState([]);
-// const [totalPrice, setTotalPrice] = useState(0);
+let heartBtn = document.getElementById('love-btn');
+let minusBtn = document.getElementById('minus-btn');
+let plusBtn = document.getElementById('plus-btn');
+let deleteBtn = document.getElementById('delete-btn');
+let quantitySpan = document.getElementById('quantity');
+let priceSpan = document.getElementById('price');
 
-// const addToCart = (product) => {
-//     const existingItem = cartItems.find((item) => item.id === product.id);
-//     if (existingItem) {
-//       existingItem.quantity += 1;
-//       setCartItems([...cartItems]);
-//     } else {
-//       const newItem = { ...product, quantity: 1 };
-//       setCartItems([...cartItems, newItem]);
-//     }
-//     setTotalPrice(totalPrice + product.price);
-//   };
+let quantity = 0;
+let price = 0.00;
 
-
-//   <Product addToCart={addToCart} />
-
-
-
-const card = document.querySelector('.card');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      card.classList.add('visible');
-      observer.disconnect();
-    }
-  });
+heartBtn.addEventListener('click', function() {
+  heartBtn.classList.toggle('liked');
 });
 
-observer.observe(card);
+minusBtn.addEventListener('click', function() {
+  if (quantity > 0) {
+    quantity--;
+    quantitySpan.textContent = quantity;
+    priceSpan.textContent = '$' + (quantity * 10).toFixed(2);
+  }
+});
+
+plusBtn.addEventListener('click', function() {
+  quantity++;
+  quantitySpan.textContent = quantity;
+  priceSpan.textContent = '$' + (quantity * 10).toFixed(2);
+});
+
+deleteBtn.addEventListener('click', function() {
+  quantity = 0;
+  quantitySpan.textContent = quantity;
+  priceSpan.textContent = '$' + (quantity * 10).toFixed(2);
+});
